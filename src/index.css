@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,7 +10,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-#root { 
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -32,6 +31,10 @@ html {
   background-color: tomato;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
-a:visited { color: initial; }
+a:visited {
+  color: initial;
+}

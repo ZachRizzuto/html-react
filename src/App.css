@@ -12,7 +12,7 @@
   font-size: 30px;
 }
 
-.header nav { 
+.header nav {
   display: flex;
   list-style: none;
   width: 33%;
@@ -27,7 +27,9 @@
   font-size: 16px;
 }
 
-.header li:hover { background-color: tomato; }
+.header li:hover {
+  background-color: tomato;
+}
 
 table {
   border-radius: 5px;
@@ -38,15 +40,20 @@ table {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbjOHCw2pwjjUvQW4HsEctQyfzWcDmMAjr4ay6xj_zEZVpJQjm_JPdlkb3Lv64vVqRrQ0&usqp=CAU);
 }
 
-th { 
-  background-color: black; 
+th {
+  background-color: black;
   color: white;
 }
 
-tr.dark { background-color: #dddddde1; }
-tr.light { background-color: #ffffffe1; }
+tr.dark {
+  background-color: #dddddde1;
+}
+tr.light {
+  background-color: #ffffffe1;
+}
 
-td, th {
+td,
+th {
   border: 1px solid #aaaaaa;
   text-align: left;
   padding: 8px;
@@ -111,4 +118,4 @@ td, th {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  }
+}

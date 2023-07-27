@@ -1,6 +1,6 @@
-import { CharacterRow } from './rankTable.tsx'
-import { Character } from './Character.tsx';
-import './App.css'
+import { CharacterRow } from "./rankTable.tsx";
+import { Character } from "./Character.tsx";
+import "./App.css";
 
 export type Character = {
   name: string;
@@ -47,7 +47,8 @@ const data: Character[] = [
     nickName: "Greed",
     votes: 45,
     skillset: ["Skin Hardening", "Homunculii"],
-    imageUrl: "https://static.wikia.nocookie.net/villains/images/f/fd/20111222135943%21Greed.png",
+    imageUrl:
+      "https://static.wikia.nocookie.net/villains/images/f/fd/20111222135943%21Greed.png",
     background:
       "Greed is one of the seven deadly sins Homunculii. He's the most 'on our side' of all of them.",
   },
@@ -87,8 +88,7 @@ const data: Character[] = [
     skillset: ["Healing Alchemy", "Making Philospher Stones"],
     background:
       "Dr. Marcoh did some F**ked up S**t in the war on ishval, but his redemption arc is strong",
-    imageUrl:
-      "https://static.wikia.nocookie.net/fma/images/8/88/Marcoh.png",
+    imageUrl: "https://static.wikia.nocookie.net/fma/images/8/88/Marcoh.png",
   },
   {
     name: "Winrey Rockbell",
@@ -105,7 +105,6 @@ const data: Character[] = [
 const topFive = [...data].sort((a, b) => b.votes - a.votes).slice(0, 5);
 
 function App() {
-
   return (
     <>
       <div className="header">
@@ -126,22 +125,32 @@ function App() {
               <th>Skillset</th>
               <th>Votes</th>
             </tr>
-            {
-              topFive.map((char: Character, i: number) => {
-                return i % 2 === 0
-                  ? <CharacterRow name={char.name} skillset={char.skillset} vote={char.votes} bgColor={'dark'} key={char.name}/>
-                  : <CharacterRow name={char.name} skillset={char.skillset} vote={char.votes} bgColor={'light'} key={char.name}/>
-              })
-            }
+            {topFive.map((char: Character, i: number) => (
+              <CharacterRow
+                name={char.name}
+                skillset={char.skillset}
+                vote={char.votes}
+                bgColor={i % 2 === 0 ? "dark" : "light"}
+                key={char.name}
+              />
+            ))}
           </tbody>
         </table>
       </section>
 
       <section id="character-cards">
-        {data.map((char) => <Character name={char.name} nickName={char.nickName} desc={char.background} img={char.imageUrl} key={char.name}/>)}
+        {data.map((char) => (
+          <Character
+            name={char.name}
+            nickName={char.nickName}
+            desc={char.background}
+            img={char.imageUrl}
+            key={char.name}
+          />
+        ))}
       </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
