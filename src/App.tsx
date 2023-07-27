@@ -1,6 +1,7 @@
 import { CharacterRow } from "./rankTable.tsx";
 import { Character } from "./Character.tsx";
 import "./App.css";
+import "./Character.css"
 
 export type Character = {
   name: string;
